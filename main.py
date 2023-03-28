@@ -29,7 +29,7 @@ def login():
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=email_id, password=password)
-        connection.sendmail(from_addr=email_id, to_addrs="harshavibodkhe@gmail.com",
+        connection.sendmail(from_addr=email_id, to_addrs="RECEIVER_EMAILID",
                             msg=f"Subject:New Visitor :)\n\nName:{name}\nEmail:{email}\nPhone:{phone}\nMessage:{message}")
     return '<h1>Successfully Sent. Thanks for visiting!</h1>'
 
@@ -39,8 +39,8 @@ def post_section(num):
     return render_template("post.html",data=api,id=num)
 
 
-email_id = "lily21042002@gmail.com"
-password = "lfcseehyhcqgjhzh"
+email_id = "YOUR_EMAILID"
+password = "PASSWORD"
 
 
 
